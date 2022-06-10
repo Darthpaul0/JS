@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="wp-api.css">
+    <title>WordPress REST API</title>
+  </head>
+  <body>
+    <h1>WordPress REST API</h1>
+    <!-- Etiqueta para mostrar el título del sitio y su descripción -->
+    <article id="site" class="site"></article>
+    <!-- Etiqueta para mostrar los posts -->
+    <section id="posts" class="posts"></section>
+    <!-- GIF de carga mientras el usuario espera -->
+    <img class="loader" src="../assets/loading.gif" alt="Cargando..." />
+    <!-- Plantilla para post -->
+    <template id="post-template">
+      <article class="post">
+        <img src="" alt="" class="post-image" />
+        <aside>
+          <!-- Título del post -->
+          <h2 class="post-title"></h2>
+          <!-- Fecha -->
+          <small class="post-date"></small>
+          <!-- Enlace al original -->
+          <a class="post-link" target="_blank">Ver original</a>
+          <!-- Resumen -->
+          <p class="post-excerpt"></p>
+          <!-- Categoría -->
+          <div class="post-categories"></div>
+          <!-- Etiquetas -->
+          <div class="post-tags"></div>
+          <!-- Contenido del post -->
+          <details class="post-content">
+            <summary>Ver publicación</summary>
+            <article></article>
+          </details>
+        </aside>
+      </article>
+      <hr />
+    </template>
+    <script src="wp-api-rest.js"></script>
+  </body>
+</html>

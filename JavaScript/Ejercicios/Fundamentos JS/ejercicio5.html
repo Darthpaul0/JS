@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      /*Programa una función que invierta las palabras de una cadena de texto, 
+      pe. miFuncion("Hola Mundo") devolverá "odnuM aloH".*/
+
+      const invierteCadena = (miCadena = "") => {
+        let invertida = miCadena.split("").reverse().join("");
+        console.log(invertida);
+      };
+      invierteCadena("Hola Juan");
+    </script>
+  </body>
+</html>

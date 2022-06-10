@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      /*Programa una función para contar el número de veces que se repite una palabra en un texto largo, 
+        pe. miFuncion("hola mundo adios mundo", "mundo") devolverá 2.*/
+
+      const buscarPalabra = (str = "", palabra1 = "") => {
+        let apariciones = 0;
+        apariciones = str.split(palabra1).length - 1;
+        console.log(apariciones);
+      };
+
+      buscarPalabra("El veloz perro alcanzó al otro perro", "perro");
+    </script>
+  </body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*Programa una función que devuelva el monto final después de aplicar un descuento a una cantidad dada, 
+        pe. miFuncion(1000, 20) devolverá 800.*/
+
+        const descuento = (cantidad = undefined, descontado = 0) =>{
+            //COMPROBACIONES
+            if(cantidad === undefined) return console.warn("Falta la cantidad");
+            if(typeof cantidad !== "number") return console.warn("La cantidad debe ser un número");
+            if(cantidad <= 0) return console.warn("La cantidad debe ser un número mayor que 0");
+            if(typeof descontado !== "number") return console.warn("El descuento debe ser un número");
+            return console.info(`${cantidad} - ${descontado}% = ${cantidad-cantidad*descontado/100}`);
+        }
+        descuento(1000,20);
+    </script>
+</body>
+</html>

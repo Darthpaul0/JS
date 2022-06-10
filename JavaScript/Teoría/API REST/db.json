@@ -1,0 +1,56 @@
+{
+  "jugadores": [
+    {
+      "nombre": "Pedro",
+      "equipo": "Barcelona",
+      "id": "3"
+    },
+    {
+      "id": "4",
+      "nombre": "Müller",
+      "equipo": "Bayern München"
+    },
+    {
+      "nombre": "Mbappé",
+      "equipo": "PSG",
+      "id": "eJKd_kX"
+    },
+    {
+      "nombre": "Messi",
+      "equipo": "PSG",
+      "id": "0AArpaC"
+    },
+    {
+      "nombre": "Piqué",
+      "equipo": "Barcelona",
+      "id": "Yqe8Lah"
+    }
+  ],
+  "equipos": [
+    {
+      "id": "1",
+      "nombre": "Barcelona",
+      "país": "España"
+    },
+    {
+      "id": "2",
+      "nombre": "Liverpool",
+      "país": "Inglaterra"
+    },
+    {
+      "id": "3",
+      "nombre": "Granada",
+      "país": "España"
+    },
+    {
+      "id": "4",
+      "nombre": "Köln 96",
+      "país": "Alemania"
+    },
+    {
+      "id": "5",
+      "nombre": "Torino",
+      "país": "Italia"
+    }
+  ]
+}

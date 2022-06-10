@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      /*Programa una función que dado un array numérico devuelve otro array con los números elevados al cuadrado, 
+        pe. mi_funcion([1, 4, 5]) devolverá [1, 16, 25].*/
+
+      const elevararrayNumeros = (
+        arrayNumeros = undefined,
+        potencia = undefined
+      ) => {
+        //Validaciones
+        if (arrayNumeros === undefined)
+          return console.warn("No se ha introducido ningún número");
+        if (potencia === undefined)
+          return console.warn("No se ha introducido ninguna potencia");
+        if (!(arrayNumeros instanceof Array))
+          return console.error("Se debe introducir un array de números");
+        if (arrayNumeros.length === 0)
+          return console.error("El array está vacío");
+        for (let numero of arrayNumeros) {
+          if (typeof numero !== "number")
+            return console.error("Solo se aceptan números en el array");
+        }
+        if (typeof potencia !== "number")
+          return console.error("La potencia debe ser un número");
+        if (potencia < 0)
+          return console.error("La potencia debe ser un número positivo.");
+
+        //Algoritmo
+        const nuevoArray = [];
+        for (let i = 0; i < arrayNumeros.length; i++) {
+          nuevoArray.push(Math.pow(arrayNumeros[i], potencia));
+        }
+        /*
+        SOLUCIÓN ALTERNATIVA
+        const nuevoArray = arrayNumeros.map(elemento => elemento*elemento);
+        return console.info(`Original = ${arrayNumeros} \n Nuevo = ${nuevoArray}`);
+        */
+       return console.info(`Original = ${arrayNumeros} \nNuevo = ${nuevoArray}`);
+      };
+
+      elevararrayNumeros([6, 2, 5], 2);
+    </script>
+  </body>
+</html>

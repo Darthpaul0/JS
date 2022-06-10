@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*Programa una función que valide que un texto sea un email válido, 
+        pe. miFuncion("jonmircha@gmail.com") devolverá verdadero.*/
+
+        const validarEmail = (email = "") => {
+        //VALIDACIONES
+        if (!email) return console.warn("No se ha introducido ningún texto.");
+        if (typeof email !== "string")
+          return console.error("¡Solo se acepta texto!");
+        //Variable que recoge la expresión regular
+        let expreReg = /[a-z0-9]+(\.[_a-z0-9]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,15})/i.test(email);
+
+        return (expreReg)
+          ? console.info(`"${email}" es un email válido`)
+          : console.warn(`"${email}" NO es un email válido`);
+      };
+
+      validarEmail();
+      validarEmail(3);
+      validarEmail("Fernández");
+      validarEmail("juan-kiko@juan");
+      validarEmail("juan-kiko@juan.local");
+      validarEmail("j@j.jj");
+    </script>
+</body>
+</html>

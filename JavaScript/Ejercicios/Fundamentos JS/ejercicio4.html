@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      /*Programa una función que repita un texto X veces, 
+    pe. miFuncion('Hola Mundo', 3) devolverá Hola Mundo Hola Mundo Hola Mundo.*/
+
+      const repiteTexto = (miCadena = "", repeticiones = undefined) => {
+        if (!miCadena) return console.warn("No hay cadena que repetir.");
+        if (repeticiones === undefined)
+          return console.warn("Número de repeticiones no especificado.");
+        if (repeticiones === 0)
+          return console.error("El número de repeticiones es inválido.");
+        if (Math.sign(repeticiones) === -1)
+          return console.error(
+            "Imposible tener un número negativo de repeticiones."
+          );
+        for (let i = 1; i <= repeticiones; i++) {
+          console.info(`${miCadena}, ${i}`);
+        }
+      };
+
+      repiteTexto("joder", 5);
+    </script>
+  </body>
+</html>

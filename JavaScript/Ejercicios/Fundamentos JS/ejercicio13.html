@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      /* Programa una función que determine si un número es par o impar, pe. miFuncion(29) devolverá Impar.*/
+      const esPar = (num = undefined) => {
+        if (num === undefined)
+          return console.warn("No se ha introducido un número");
+        if (typeof num !== "number")
+          return console.error("No se ha introducido un número");
+        
+        return (num % 2 === 0)
+        ?console.info(`El número ${num} es par`)
+        :console.info(`El número ${num} es impar`);
+      };
+
+      esPar(45);
+
+    </script>
+  </body>
+</html>

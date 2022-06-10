@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      /* Programa una función para convertir números de base binaria a decimal y viceversa,
+         pe. miFuncion(100,2) devolverá 4 base 10.*/
+
+      const convertirNumeros = (num = undefined, base = undefined) => {
+        //COMPROBACIONES
+        //De número
+        if (num === undefined)
+          return console.warn("No se ha introducido ningún número.");
+        if (typeof num !== "number")
+          return console.error("Se debe introducir un número.");
+        if (Math.sign(num) === -1)
+          return console.error("El número debe ser positivo");
+        if (base === undefined)
+          return console.warn("No se ha introducido ninguna base.");
+        //de base
+        if (typeof base !== "number")
+          return console.error("La base debe ser un número.");
+        if (Math.sign(base) === -1)
+          return console.error("La base debe ser un número positivo");
+        if (base !== 2 && base !== 10)
+          return console.error("Solo se acepta base binaria(2) o decimal(10)");
+        //ALGORITMO
+        if (base === 2) {
+          return console.info(
+            `El número ${num} de base ${base} es igual a ${parseInt(num,base)}`
+          );
+        } else if (base === 10) {
+          return console.info(
+            `El número ${num} de base ${base} es igual a ${num.toString(base)}`
+          );
+        }
+      };
+      convertirNumeros(10100, 2);
+      convertirNumeros(4, 10);
+    </script>
+  </body>
+</html>

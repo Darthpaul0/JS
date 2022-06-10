@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      /*Programa una función que dado un arreglo de elementos, elimine los duplicados,
+              pe. miFuncion(["x", 10, "x", 2, "10", 10, true, true]) devolverá ["x", 10, 2, "10", true].*/
+
+      const eliminaDuplicados = (arrayElementos = undefined) => {
+        //Validaciones
+        if (arrayElementos === undefined)
+          return console.warn("No se ha introducido ningún número");
+        if (!(arrayElementos instanceof Array))
+          return console.error("Se debe introducir un array de números");
+        if (arrayElementos.length === 0)
+          return console.error("El array está vacío");
+          if (arrayElementos.length === 1)
+          return console.error("El array debe tener al menos 2 elementos");
+
+        /*ALGORITMO*/
+
+        return console.info({
+          original: arrayElementos,
+          sinDuplicados: arrayElementos.filter((value,index,self) => self.indexOf(value) === index)
+        });
+
+        /*SOLUCIÓN ALTERNATIVA
+        return console.info({
+          original: arrayElementos,
+          sinDuplicados: [...new Set(arrayElementos)] //Estamos utilizando un nuevo tipo de dato, que no permite duplicados
+        });
+        */
+      };
+
+      eliminaDuplicados();
+      eliminaDuplicados("");
+      eliminaDuplicados([]);
+      eliminaDuplicados([1, 1, "j", "j", true, true]);
+    </script>
+  </body>
+</html>

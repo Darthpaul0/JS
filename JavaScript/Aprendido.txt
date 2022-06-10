@@ -1,0 +1,3 @@
+No usar jamás var
+En Strings, conviene usar template strings 
+´Hola Mundo, soy ${nombre}´;

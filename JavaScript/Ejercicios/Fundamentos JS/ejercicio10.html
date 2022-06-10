@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      /*Programa una función que reciba un número y evalúe si es capicúa o no (que se lee igual en un sentido que en otro),
+        pe. miFuncion(2002) devolverá true.*/
+      const invierteCadena = (miCadena = "") => {
+        let invertida = miCadena.split("").reverse().join("");
+        console.log(invertida);
+      };
+
+      const esCapicua = (num = 0) => {
+        let invertida;
+        //comprobamos que se haya introducido un número
+        if (num !== String) {
+          invertida = num.toString().split("").reverse().join("");
+          invertida = parseInt(invertida);
+          (invertida == num)
+            ? console.log("Es capicúa")
+            : console.log("No es capicúa");
+        } else {
+            invertida = num.split("").reverse().join("");
+        }
+      };
+      esCapicua("0002");
+    </script>
+  </body>
+</html>

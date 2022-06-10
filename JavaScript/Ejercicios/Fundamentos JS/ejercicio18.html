@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      /*Programa una función que dada una cadena de texto cuente el número de vocales y consonantes,
+            pe. miFuncion("Hola Mundo") devuelva Vocales: 4, Consonantes: 5.*/
+
+      const cuentaVocales = (texto = undefined) => {
+        if (texto === undefined)
+          return console.warn("No se ha introducido ningún texto.");
+        if (typeof texto !== "string")
+          return console.error("¡Solo se acepta texto!");
+        if (!/[aA-zZ]/.test(texto))
+          return console.error("No se ha introducido ningún texto.");
+        let vocales = 0;
+        let consonantes = 0;
+        for (let i = 0; i < texto.length; i++) {
+          /[aeiou]/.test(texto.split("")[i])
+            ? vocales++
+            : texto.split("")[i] !== " "
+            ? consonantes++
+            : true;
+        }
+        return console.info(
+          `En el texto hay ${consonantes} consonantes y ${vocales} vocales`
+        );
+      };
+
+      cuentaVocales("");
+    </script>
+  </body>
+</html>

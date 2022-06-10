@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="buscadorCanciones.css" />
+    <title>Buscador de canciones</title>
+  </head>
+  <body>
+    <h1>Buscador de canciones</h1>
+    <form id="song-search">
+      <input type="text" name="artist" placeholder="Intérprete" required />
+      <br />
+      <input type="text" name="song" placeholder="Canción" required />
+      <br />
+      <input type="submit" />
+    </form>
+    <img class="loader" src="./loading.gif" alt="Buscando la partitura..." />
+    <aside class="error"></aside>
+    <main>
+      <article class="artist"></article>
+      <article class="song"></article>
+    </main>
+    <script src="buscadorCanciones.js"></script>
+  </body>
+</html>

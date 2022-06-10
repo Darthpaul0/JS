@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      /*Programa una función que dado un arreglo de números obtenga el promedio,
+        pe. promedio([9,8,7,6,5,4,3,2,1,0]) devolverá 4.5.*/
+
+      const mediar = (arrayNum = undefined) => {
+        //Validaciones
+        if (!(arrayNum instanceof Array))
+          return console.error("Debe introducirse un array");
+        if (arrayNum.length === 0)
+          return console.warn("No se ha introducido nada");
+        for (let numero of arrayNum) {
+          if (typeof numero !== "number")
+            return console.error("Solo se aceptan números en el array");
+        }
+        //Algoritmo
+        let suma = 0;
+        for (let i = 0; i < arrayNum.length; i++) {
+          suma += arrayNum[i];
+        }
+
+        return console.info(`La media es ${suma / arrayNum.length}`);
+        /*SOLUCIÓN ALTERNATIVA
+        return console.info(
+          arrayNum.reduce((total, num, index, arrayNum) => {
+            total += num;
+            if (index === arrayNum.length - 1) {
+              return `La media de ${arrayNum.join(" + ")} es igual a ${
+                total / arrayNum.length
+              }`;
+            } else {
+              return total;
+            }
+          })
+        );*/
+      };
+
+      mediar();
+      mediar("");
+      mediar([]);
+      mediar(["juan"]);
+      mediar([1, 2, 3, 4]);
+    </script>
+  </body>
+</html>

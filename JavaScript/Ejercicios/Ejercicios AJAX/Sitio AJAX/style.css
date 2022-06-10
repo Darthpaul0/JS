@@ -1,0 +1,83 @@
+html {
+  /*Para que las cajas empiecen desde el borde*/
+  box-sizing: border-box;
+  font-family: sans-serif;
+  font-size: 16px;
+}
+
+*,
+*:after,
+*:before {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  /*esto lo necesitamos para posteriormente poder 
+  fijar el footer al fondo de la pantalla*/
+  min-height: 100vh;
+  /*de esta forma los elementos se posicionan uno debajo de otro*/
+  display: flex;
+  flex-direction: column;
+}
+
+/*para evitar que las imágenes NO desborden
+ el documento y sean responsivas*/
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+main {
+  /*determina cuánto espacio le asignamos al elemento main.
+    Haciendo esto conseguimos situar el footer al final de la página*/
+  flex-grow: 1;
+}
+
+/*esta clase la usamos para centrar el contenido*/
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  /*a partir de 992px el contenido se centra*/
+  max-width: 992px;
+}
+
+.header {
+  padding: 0.5rem;
+  background-color: darkblue;
+}
+
+.header-content {
+  /*ponemos los elementos de la cabecera en fila*/
+  display: flex;
+  /*con un espaciado equivalente entre elementos*/
+  justify-content: space-between;
+  /*todo centrado*/
+  align-items: center;
+}
+
+/*le damos un tamaño predeterminado al logo*/
+.logo img {
+  width: 3rem;
+  height: auto;
+}
+
+/*estilo para el menú*/
+.menu {
+  display: flex;
+  justify-content: space-between;
+  font-size: 115%;
+}
+
+.menu a {
+  text-decoration: none;
+  color: white;
+  padding: 0 1vw;
+  /*animación para hover ⬇*/
+  transition: all 0.3s ease-in-out;
+}
+
+.menu a:hover {
+  color: darkblue;
+  background-color: white;
+}

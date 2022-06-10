@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      /* Programa una función que dada una fecha válida determine cuantos años han pasado hasta el día de hoy, 
+      pe. miFuncion(new Date(1984,4,23)) devolverá 35 años (en 2020).*/
+
+      const restaFechas = (
+        anho = undefined,
+        mes = undefined,
+        dia = undefined
+      ) => {
+        //VALIDACIONES
+        if (anho === undefined || mes === undefined || dia === undefined)
+          return console.warn("Fecha incompleta");
+        if (Math.sign(mes) === -1 || Math.sign(dia) === -1)
+          return console.warn("Fecha incorrecta");
+        //ALGORITMO
+        let hoy = new Date().getTime();
+        let miFecha = new Date(anho, mes, dia).getTime();
+        return console.info(
+          `Diferencia en años = ${Math.floor(
+            Math.abs((hoy - miFecha) / 1000 / 60 / 60 / 24 / 365)
+          )}`
+        );
+      };
+      restaFechas("1997", "2", "28");
+    </script>
+  </body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      /*Crea una función que permita obtener el capicúa de cualquier número
+        Se obtiene el capicúa de un número sumando el número con su reverso, hasta obtener su capicúa.
+        Ejemplo: calcular el capicúa del número 57
+        57+75=132, 132+231=363*/
+
+      const esCapicua = (num = 0) => {
+        let invertida;
+        //comprobamos que se haya introducido un número
+        if (num !== String) {
+          invertida = num.toString().split("").reverse().join("");
+          invertida = parseInt(invertida);
+          invertida == num
+            ? console.log("Es capicúa")
+            : console.log("No es capicúa");
+        } else {
+          invertida = num.split("").reverse().join("");
+        }
+      };
+
+      const calcularCapicua = (num = undefined) => {
+        //comprobamos que haya introducido un número
+        if (num === undefined)
+          return console.warn("No se ha introducido un número");
+        //si es un número, le damos la vuelta
+      };
+    </script>
+  </body>
+</html>

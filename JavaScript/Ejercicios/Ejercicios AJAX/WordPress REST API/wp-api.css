@@ -1,0 +1,94 @@
+html {
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+}
+
+*,
+:after,
+:before {
+  box-sizing: inherit;
+}
+
+/* Enlaces */
+a {
+  color: maroon;
+  transition: all 0.3s ease-out;
+}
+
+a:hover {
+  opacity: 0.66;
+}
+
+/* Imágenes */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Títulos */
+h1 {
+  text-align: center;
+}
+
+/* Línea de separación */
+hr {
+  border: thin solid maroon;
+  margin: 3rem auto;
+  width: 80%;
+}
+
+/* Información del sitio */
+.site {
+  margin: 1rem auto;
+  padding: 1rem;
+  max-width: 50%;
+  text-align: center;
+}
+
+/* Posts */
+.post {
+  margin: 1rem auto;
+  padding: 1rem;
+  border-radius: 0.5 rem;
+  max-width: 80%;
+  text-align: center;
+  background-color: antiquewhite;
+}
+
+/* Fecha */
+.post-date {
+  margin: 1rem auto;
+  display: block;
+}
+
+/* Alineación de texto */
+.post-excerpt,
+.post-categories,
+.post-tags,
+.post-content {
+  text-align: left;
+}
+
+/* Resumen */
+.post-content summary {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.post-content > article {
+  padding: 1rem;
+  background-color: white;
+}
+
+/* Imágenes dentro del post */
+.post-content img {
+  display: block;
+  margin: auto;
+}
+
+/* Imagen de carga */
+.loader {
+  display: none;
+  margin: 2rem auto;
+}

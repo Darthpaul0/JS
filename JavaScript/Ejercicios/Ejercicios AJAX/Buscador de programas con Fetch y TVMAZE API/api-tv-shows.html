@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="programas.css" />
+    <title>Buscador programas de TV</title>
+  </head>
+  <body>
+    <h1>Buscador de programas de TV en TVMAZE</h1>
+    <input
+      type="search"
+      id="search"
+      placeholder="Buscar programas"
+      autocomplete="off"
+    />
+    <section id="shows" class="grid-fluid"></section>
+    <template id="show-template">
+      <article class="show">
+        <h3></h3>
+        <div></div>
+        <img />
+        <a></a>
+      </article>
+    </template>
+    <script src="programas.js"></script>
+  </body>
+</html>

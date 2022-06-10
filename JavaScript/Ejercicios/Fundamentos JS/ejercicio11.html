@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      /*Programa una función que calcule el factorial de un número
+        (El factorial de un entero positivo n, se define como el producto de todos los números enteros
+        positivos desde 1 hasta n), pe. miFuncion(5) devolverá 120.*/
+
+      const factorial = (num = 0) => {
+        if (!Number.isInteger(num)) {
+          console.warn("¡Debes introducir un número entero!");
+        } else {
+          if (num < 0) {
+            console.warn("El número debe ser mayor que 0");
+          } else {
+            let factorial = 1;
+            for (let i = num; i > 1; i--) {
+              factorial *= i;
+            }
+            console.log(factorial);
+          }
+        }
+      };
+      factorial(0);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      /*Programa una función que te devuelva el texto recortado según el número de
+          caracteres indicados, pe. miFuncion("Hola Mundo", 4) devolverá "Hola".*/
+
+      const recortaCadena = (miCadena = "", recorte = undefined) =>
+        (!miCadena)
+          ? console.warn("No se ha introducido ninguna cadena.")
+          : (recorte === undefined)
+            ? console.warn("No se ha introducido el recorte.")
+            :console.info(miCadena.slice(0, recorte));
+     recortaCadena('juanito',); 
+    </script>
+  </body>
+</html>

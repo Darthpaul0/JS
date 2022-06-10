@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      /*Programa una función que dado un array devuelva el número mas alto y el más bajo de dicho array, 
+        pe. miFuncion([1, 4, 5, 99, -60]) devolverá [99, -60].*/
+
+      const mayorMenor = (arrayNumeros = undefined) => {
+        //Validaciones
+        if (arrayNumeros === undefined)
+          return console.warn("No se ha introducido ningún número");
+        if (!(arrayNumeros instanceof Array))
+          return console.error("Se debe introducir un array de números");
+        if (arrayNumeros.length === 0)
+          return console.error("El array está vacío");
+        for (let numero of arrayNumeros) {
+          if (typeof numero !== "number")
+            return console.error("Solo se aceptan números en el array");
+        }
+        //Algoritmo
+        let mayor = 0;
+        let menor = 0;
+        for (let i = 0; i < arrayNumeros.length; i++) {
+          if (arrayNumeros[i] > mayor) {
+            mayor = arrayNumeros[i];
+          }
+          if (arrayNumeros[i] < menor) {
+            menor = arrayNumeros[i];
+          }
+        }
+        return console.info(
+          `El número mayor es ${mayor} y el menor es ${menor}`
+        );
+
+        /*
+        SOLUCIÓN ALTERNATIVA
+        return console.info(`Arreglo original: ${arrayNumeros} \n Mayor: ${Math.max(...arrayNumeros)} \n Menor: ${Math.min(...arrayNumeros)}`);
+        */
+      };
+
+      mayorMenor();
+      mayorMenor([]);
+      mayorMenor([""]);
+      mayorMenor("");
+      mayorMenor([5, 3, 7, 15]);
+    </script>
+  </body>
+</html>
