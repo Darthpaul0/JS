@@ -15,6 +15,10 @@ import ScrollHooks from "./components/ScrollHooks";
 import RelojHooks from "./components/RelojHooks";
 import AjaxHooks from "./components/AJAX-Hooks";
 import HooksPersonalizados from "./components/HooksPersonalizados";
+import Referencias from "./components/Referencias";
+import Formularios from "./components/Formularios";
+import Estilos from "./components/Estilos";
+import ComponentesEstilizados from "./components/ComponentesEstilizados";
 
 function App() {
   return (
@@ -59,7 +63,7 @@ function App() {
           <EventosES7 />
           <hr></hr>
           <MasSobreEventos />
-          <hr></hr>
+          <hr></hr> 
           <Comunicacion />
           <hr></hr>
           <CicloVida />
@@ -75,6 +79,14 @@ function App() {
           <AjaxHooks />
           <hr></hr>
           <HooksPersonalizados />
+          <hr></hr>
+          <Referencias />
+          <hr></hr>
+          <Formularios />
+          <hr></hr>
+          <Estilos />
+          <hr></hr>
+          <ComponentesEstilizados />
         </section>
       </header>
     </div>
