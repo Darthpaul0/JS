@@ -1,0 +1,29 @@
+{
+  "jugadores": [
+    {
+      "id": 1,
+      "name": "Pedro",
+      "team": "Barcelona"
+    },
+    {
+      "id": 2,
+      "name": "Müller",
+      "team": "Bayern München"
+    },
+    {
+      "id": 3,
+      "name": "Mbappé",
+      "team": "PSG"
+    },
+    {
+      "id": 4,
+      "name": "Messi",
+      "team": "PSG"
+    },
+    {
+      "id": 5,
+      "name": "Piqué",
+      "team": "Barcelona"
+    }
+  ]
+}
