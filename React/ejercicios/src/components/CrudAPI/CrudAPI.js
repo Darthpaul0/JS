@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
+import { helpHttp } from "../../helpers/helpHttp";
 import CrudForm from "../CrudAPP/CrudForm";
 import CrudTable from "../CrudAPP/CrudTable";
 
@@ -7,6 +8,23 @@ const CrudAPI = () => {
 
   // con esto determinaremos qué operación hay que hacer en base al State
   const [dataToEdit, setDataToEdit] = useState(null);
+
+  // variable que usaremos para llamar al helper
+  let api = helpHttp();
+  // endpoint
+  let url = `http://localhost:5000/jugadores`;
+
+  // usamos este useEffect para hacer la petición fetch
+  useEffect(() => {
+    api.get(url).then((res) => {
+      //console.log(res);
+      if (!res.err) {
+        setDb(res);
+      } else {
+        setDb(null);
+      }
+    });
+  }, []);
 
   // función para crear un registro
   const createData = (data) => {

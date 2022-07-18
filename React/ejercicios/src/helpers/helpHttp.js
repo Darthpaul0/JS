@@ -23,7 +23,7 @@ export const helpHttp = () => {
     options.body = JSON.stringify(options.body) || false;
     //validación de body, no se puede pasar un body falso o vacío
     if (!options.body) delete options.body;
-    console.log(options);
+    //console.log(options);
     // establecemos un temporizador para que la petición no se quede
     // cargando eternamente
     setTimeout(() => controller.abort(), 3000);
