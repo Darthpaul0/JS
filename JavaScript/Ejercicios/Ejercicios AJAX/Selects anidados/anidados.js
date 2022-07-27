@@ -28,7 +28,7 @@ function loadProvince(community) {
     .then((res) => (res.ok ? res.json() : Promise.reject(res)))
     .then((json) => {
       //console.log(json);
-      let $options = `<option value="">Elige un municipio</option>`;
+      let $options = `<option value="">Elige una provincia</option>`;
       for (let i = 0; i < json.data.length; i++) {
         $options += `<option value="${json.data[i].CPRO}">${json.data[i].PRO}</option>`;
       }

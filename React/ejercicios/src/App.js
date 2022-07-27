@@ -1,5 +1,6 @@
 import CrudAPI from "./components/CrudAPI/CrudAPI";
 import CrudApp from "./components/CrudAPP/CrudApp";
+import SelectsAnidados from "./components/SelectsAnidados/SelectsAnidados";
 import SongSearch from "./components/Song Search/SongSearch";
 
 function App() {
@@ -7,6 +8,8 @@ function App() {
     <div>
       <>
         <h1>Ejercicios con React</h1>
+        <SelectsAnidados />
+        <hr />
         <SongSearch />
         <hr />
         <CrudAPI />
