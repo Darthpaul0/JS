@@ -26,7 +26,7 @@ export const helpHttp = () => {
     //console.log(options);
     // establecemos un temporizador para que la petición no se quede
     // cargando eternamente
-    setTimeout(() => controller.abort(), 3000);
+    setTimeout(() => controller.abort(), 5000);
 
     return fetch(endpoint, options)
       .then((res) =>

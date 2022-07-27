@@ -44,10 +44,11 @@ const SongSearch = () => {
         helpHttp().get(songURL),
       ]);
 
+      //console.log(artistRes, songRes);
+
       // actualizamos las variables de estado con la respuesta de la API
       setBio(artistRes);
       setLyric(songRes);
-      console.log(artistRes, songRes);
 
       // eliminamos el loader una vez tenemos respuesta de las APIs
       setLoading(false);
@@ -64,9 +65,15 @@ const SongSearch = () => {
   return (
     <div>
       <h2>SongSearch</h2>
-      {loading && <Loader />}
-      <SongForm handleSearch={handleSearch} />
-      <SongDetails search={search} lyric={lyric} bio={bio} />
+      <article className="grid-1-3">
+        <SongForm handleSearch={handleSearch} />
+        {loading && <Loader />}
+        {/* Controlamos que no muestre nada mientras que no tengamos respuesta */}
+        {/* y el loader desaparezca */}
+        {search && !loading && (
+          <SongDetails search={search} lyric={lyric} bio={bio} />
+        )}
+      </article>
     </div>
   );
 };

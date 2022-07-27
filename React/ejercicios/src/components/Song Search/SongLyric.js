@@ -2,14 +2,13 @@
  * Componente específico para mostrar la información de la canción
  */
 
-import React from "react";
-
-const SongLyrics = () => {
+ const SongLyric = ({ title, lyrics }) => {
   return (
-    <div>
-      <h2>Letra de la canción</h2>
-    </div>
+    <section>
+      <h3>{title}</h3>
+      <blockquote style={{ whiteSpace: "pre-wrap" }}>{lyrics}</blockquote>
+    </section>
   );
 };
 
-export default SongLyrics;
+export default SongLyric;

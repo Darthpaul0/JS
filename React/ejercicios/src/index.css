@@ -50,6 +50,11 @@ hr {
   margin: 2rem auto;
 }
 
+img {
+  max-width: 100%;
+  height: auto;
+}
+
 table {
   border-spacing: 0;
   border-collapse: collapse;
@@ -67,6 +72,12 @@ td {
   .grid-1-2 {
     display: grid;
     grid-template-columns: 1fr 1fr;
+    align-items: start;
+    gap: 2rem;
+  }
+  .grid-1-3 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
     align-items: start;
     gap: 2rem;
   }
