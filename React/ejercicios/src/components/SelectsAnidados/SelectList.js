@@ -2,7 +2,7 @@ import { useFetch } from "../../hooks/useFetch";
 import Loader from "../CrudAPI/Loader";
 import Message from "../CrudAPI/Message";
 
-const SelectList = ({ title, url, handleChange }) => {
+const SelectList = ({ title, url, code, handleChange }) => {
   const { data, error, loading } = useFetch(url);
   console.log(data, error, loading);
 
@@ -18,13 +18,12 @@ const SelectList = ({ title, url, handleChange }) => {
     );
   }
 
-  let id = `select-${title}`;
-
   // esta variable pone en mayúscula la primera letra del título
-  let label = title.charAt(0).toUpperCase() + title.slice(1) + " ";
-
-  let options = data[0][title];
+  let id = `select-${title}`;
+  let label = title.charAt(0).toUpperCase() + title.slice(1);
+  let options = data.response[title];
   console.log(options);
+
   return (
     <>
       <label htmlFor={id}>{label}</label>
@@ -32,9 +31,11 @@ const SelectList = ({ title, url, handleChange }) => {
       <select name={id} id={id} onChange={handleChange}>
         <option value="">Elige un {title}</option>
         {data &&
-          options.map((el) => {
-            return <option value={el}>{el}</option>;
-          })}
+          options.map((el) => (
+            <option key={el} value={el}>
+              {el}
+            </option>
+          ))}
       </select>
     </>
   );

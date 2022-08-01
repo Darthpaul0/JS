@@ -1,53 +1,49 @@
-/**
- * en este componente renderizamos el select anidado
- * usando como datos de ejemplo las CCAA, provincias y ciudades de España
- */
 import React, { useState } from "react";
 import SelectList from "./SelectList";
 
 const SelectsAnidados = () => {
-  // variable de estado para recoger la comunidad autónoma
-  const [community, setCommunity] = useState("");
-  // variable de estado para recoger la provincia
-  const [province, setProvince] = useState("");
-  // variable de estado para recoger el municipio
+  // variables de estado para recoger el estado, municipio y colonia
+  const [state, setState] = useState("");
   const [town, setTown] = useState("");
+  const [suburb, setSuburb] = useState("");
+
+  const TOKEN = "d81a7ac7-976d-4e1e-b7d3-b1979d791b6c";
 
   return (
     <div>
       <h2>SelectsAnidados</h2>
-      <h3>ESPAÑA</h3>
+      <h3>MÉXICO</h3>
       {/* A cada select le pasamos el título del label, la url de la API y 
       la función para registrar los cambios */}
       <SelectList
-        title="COM"
-        url="https://apiv1.geoapi.es/comunidades?type=JSON&key=&sandbox=1"
+        title="estado"
+        url={`https://api-sepomex.hckdrk.mx/query/get_estados?token=${TOKEN}`}
         handleChange={(e) => {
-          setCommunity(e.target.value);
+          setState(e.target.value);
         }}
       />
       {/* Aplicamos un renderizado condicional para no mostrar selects vacíos */}
-      {community && (
+      {state && (
         <SelectList
-          title="PRO"
-          url={`https://apiv1.geoapi.es/provincias?CCOM=${community}&type=JSON&key=&sandbox=1`}
-          handleChange={(e) => {
-            setProvince(e.target.value);
-          }}
-        />
-      )}
-      {town && (
-        <SelectList
-          title="DMUN50"
-          url={`https://apiv1.geoapi.es/municipios?CPRO=${province}&type=JSON&key=&sandbox=1`}
+          title="municipios"
+          url={`https://api-sepomex.hckdrk.mx/query/get_municipio_por_estado/${state}?token=${TOKEN}`}
           handleChange={(e) => {
             setTown(e.target.value);
           }}
         />
       )}
+      {town && (
+        <SelectList
+          title="colonia"
+          url={`https://api-sepomex.hckdrk.mx/query/get_colonia_por_municipio/${town}?token=${TOKEN}`}
+          handleChange={(e) => {
+            setSuburb(e.target.value);
+          }}
+        />
+      )}
       <pre>
         <code>
-          {community} - {province} - {town}
+          {state} - {town} - {suburb}
         </code>
       </pre>
     </div>

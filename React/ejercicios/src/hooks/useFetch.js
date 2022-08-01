@@ -19,7 +19,7 @@ export const useFetch = (url) => {
     const fetchData = async () => {
       setLoading(true);
       try {
-        const res = await fetch(url);
+        const res = await fetch(url, { signal });
         /** Si la petición da error
          * Creamos un objeto error
          * usamos un operador de cortocircuito para manejar errores
@@ -52,10 +52,10 @@ export const useFetch = (url) => {
         }
       }
     };
-    
+
     fetchData();
 
-    return () => abortController.abort;
+    return () => abortController.abort();
   }, [url]);
 
   return { data, error, loading };
