@@ -2,6 +2,7 @@ import { useModal } from "../../hooks/useModal";
 import ContactForm from "../FormValidation/ContactForm";
 import SongSearch from "../Song Search/SongSearch";
 import Modal from "./Modal";
+import ModalPortal from "./ModalPortal";
 
 const Modals = () => {
   const [isOpenModal1, openModal1, closeModal1] = useModal(false);
@@ -9,6 +10,8 @@ const Modals = () => {
   const [isOpenModalContact, openModalContact, closeModalContact] =
     useModal(false);
   const [isOpenModalSongSearch, openModalSongSearch, closeModalSongSearch] =
+    useModal(false);
+  const [isOpenModalPortal, openModalPortal, closeModalPortal] =
     useModal(false);
   return (
     <div>
@@ -35,6 +38,12 @@ const Modals = () => {
       <Modal isOpen={isOpenModalSongSearch} closeModal={closeModalSongSearch}>
         <SongSearch />
       </Modal>
+      <button onClick={openModalPortal}>Modal en portal</button>
+      <ModalPortal isOpen={isOpenModalPortal} closeModal={closeModalPortal}>
+        <h3>🌌🌌 Portal 🌌🌌</h3>
+        <p>Contenido del portal</p>
+        <img src="https://placeimg.com/300/300/people" alt="IMG" />
+      </ModalPortal>
     </div>
   );
 };
