@@ -10,6 +10,20 @@ html {
   box-sizing: inherit;
 }
 
+a {
+  margin-right: 1rem;
+}
+
 hr {
   margin: 2rem auto;
+}
+
+li {
+  margin-bottom: 1rem;
+}
+
+.active {
+  font-weight: bold;
+  color: white;
+  background-color: navy;
 }
