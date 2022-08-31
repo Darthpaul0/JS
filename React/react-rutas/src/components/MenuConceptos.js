@@ -46,9 +46,22 @@ const MenuConceptos = () => {
           </NavLink>
         </li>
         <li>
-          <span>Parámetros </span>
+          <span>Parámetros: </span>
           <Link to="/usuario/python">User 1</Link>
           <Link to="/usuario/django">User 2</Link>
+        </li>
+        <li>
+          <span>Parámetros de consulta: </span>
+          <Link to="/productos">Productos</Link>
+        </li>
+        <li>
+          <span>Redirecciones: </span>
+          <Link to="/about">About</Link>
+          <Link to="/contact">Contact</Link>
+        </li>
+        <li>
+          <span>Rutas Anidadas: </span>
+          <Link to="/react">React</Link>
         </li>
       </ol>
     </nav>

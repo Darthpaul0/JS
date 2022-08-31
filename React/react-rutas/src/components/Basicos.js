@@ -3,13 +3,24 @@
  * rutas en React, por convención se le suele poner
  * un alias, normalmente solo Router
  */
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  Navigate,
+} from "react-router-dom";
 import Home from "../pages/Home";
 import Contacto from "../pages/Contacto";
 import Nosotros from "../pages/Nosotros";
 import Error404 from "../pages/Error404";
 import MenuConceptos from "./MenuConceptos";
 import Usuario from "../pages/Usuario";
+import Productos from "../pages/Productos";
+import ReactTopics from "../pages/ReactTopics";
+import Componentes from "../pages/Componentes";
+import JSX from "../pages/JSX";
+import Estado from "../pages/Estado";
+import Props from "../pages/Props";
 // const Basicos = () => {
 //   return (
 //     <div>
@@ -64,6 +75,23 @@ const Basicos = () => {
           <Route path="/contacto" element={<Contacto />} />
           <Route path="/usuario" element={<Usuario />}>
             <Route path=":username" element={<Contacto />} />
+          </Route>
+          <Route path="/productos" element={<Productos />} />
+          <Route
+            path="/about"
+            // Usamos el objeto Navigate redirigir o no
+            element={<Navigate replace to="/nosotros" />}
+          ></Route>
+          <Route
+            path="/contact"
+            // Usamos el objeto Navigate redirigir o no
+            element={<Navigate replace to="/contacto" />}
+          ></Route>
+          <Route path="/react" element={<ReactTopics />}>
+            <Route path="jsx" element={<JSX />} />
+            <Route path="componentes" element={<Componentes />} />
+            <Route path="estado" element={<Estado />} />
+            <Route path="props" element={<Props />} />
           </Route>
           <Route path="*" element={<Error404 />} />
         </Routes>
