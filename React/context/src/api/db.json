@@ -1,0 +1,49 @@
+{
+  "jugadores": [
+    {
+      "id": 1,
+      "name": "Pedri",
+      "team": "Barcelona"
+    },
+    {
+      "id": 2,
+      "name": "Müller",
+      "team": "Bayern München"
+    },
+    {
+      "id": 3,
+      "name": "Mbappé",
+      "team": "PSG"
+    },
+    {
+      "id": 4,
+      "name": "Messi",
+      "team": "PSG"
+    },
+    {
+      "id": 5,
+      "name": "Piqué",
+      "team": "Barcelona"
+    },
+    {
+      "id": 6,
+      "name": "Lewandowski",
+      "team": "Barcelona"
+    },
+    {
+      "id": 7,
+      "name": "Courtois",
+      "team": "Real Madrid"
+    },
+    {
+      "name": "Montoro",
+      "team": "Granada",
+      "id": 1658391179169
+    },
+    {
+      "name": "Callejón",
+      "team": "Granada",
+      "id": 1662548565784
+    }
+  ]
+}

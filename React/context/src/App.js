@@ -1,5 +1,7 @@
+import CrudAPI from "./components/CrudAPI/CrudAPI";
 import MyPage from "./components/MyPage";
 import MyPageContext from "./components/MyPageContext";
+import { CrudProvider } from "./context/CrudContext";
 
 function App() {
   return (
@@ -12,6 +14,14 @@ function App() {
       >
         Documentación
       </a>
+      <hr />
+      {/*
+      El CrudProvider y el CrudConsumer no pueden estar en el 
+      mismo archivo, por eso se debe declarar aquí
+      */}
+      <CrudProvider>
+        <CrudAPI />
+      </CrudProvider>
       <hr />
       <MyPageContext />
       <hr />
