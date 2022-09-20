@@ -1,0 +1,39 @@
+{
+  "jugadores": [
+    {
+      "id": 2,
+      "name": "Müller",
+      "team": "Bayern München"
+    },
+    {
+      "id": 3,
+      "name": "Mbappé",
+      "team": "PSG"
+    },
+    {
+      "id": 5,
+      "name": "Koundé",
+      "team": "Barcelona"
+    },
+    {
+      "id": 6,
+      "name": "Lewandowski",
+      "team": "Barcelona"
+    },
+    {
+      "name": "Jorge Molina",
+      "team": "Granada",
+      "id": 1658391179169
+    },
+    {
+      "name": "Raphinha",
+      "team": "Barcelona",
+      "id": 1663147910269
+    },
+    {
+      "name": "Marcos Alonso",
+      "team": "Barcelona",
+      "id": 1663150394190
+    }
+  ]
+}
