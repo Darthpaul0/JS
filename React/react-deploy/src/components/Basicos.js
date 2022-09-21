@@ -110,19 +110,19 @@ const Basicos = () => {
           </Route>
         </Routes>
       </HashRouter>
-      <Router>
+      {/* <Router>
         <h2>
           <mark>Conceptos Básicos</mark>
         </h2>
-        {/**
+        *
          * Para poder usar las rutas, las englobamos en el componente HashRouter,
          * para después agruparlas en el componente Routes.
          * Después, a cada ruta hay que especificarle su path y qué va a mostrar,
-         * que generalmente será otro componente*/}
-        {/* Componente para mostrar el menú de rutas */}
+         * que generalmente será otro componente
+        Componente para mostrar el menú de rutas
         <MenuConceptos />
         <Routes>
-          {/* Cada ruta debe tener asignado su propio componente */}
+          Cada ruta debe tener asignado su propio componente
           <Route path="/" element={<Home />} />
           <Route path="/nosotros" element={<Nosotros />} />
           <Route path="/contacto" element={<Contacto />} />
@@ -148,13 +148,13 @@ const Basicos = () => {
           </Route>
           <Route path="*" element={<Error404 />} />
           <Route path="/login" element={<Login />} />
-          {/* Para hacer privada una ruta, la englobamos dentro de otra
-          que contenga un componente encargado de la privacidad */}
+          Para hacer privada una ruta, la englobamos dentro de otra
+          que contenga un componente encargado de la privacidad
           <Route path="/dashboard" element={<PrivateRoute />}>
             <Route path="/dashboard" element={<Dashboard />} />
           </Route>
         </Routes>
-      </Router>
+      </Router> */}
     </div>
   );
 };
