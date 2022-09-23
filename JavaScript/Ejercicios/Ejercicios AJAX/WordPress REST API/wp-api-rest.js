@@ -7,7 +7,7 @@ const d = document,
   $fragment = d.createDocumentFragment(),
   
   // endpoints
-  DOMAIN = "https://garajehermetico.com",
+  DOMAIN = "https://elcocherista.com",
   SITE = `${DOMAIN}/wp-json`,
   API_WP = `${SITE}/wp/v2`,
   POSTS = `${API_WP}/posts?_embed`,
@@ -93,7 +93,7 @@ function getPosts() {
 
         // contenido
         $template.querySelector(".post-content > article").innerHTML =
-          el.content.ren;
+          el.content.rendered;
 
         let clone = d.importNode($template, true);
         $fragment.appendChild(clone);
